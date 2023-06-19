@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import "./Products.css"
+import toast, { Toaster } from 'react-hot-toast';
 import { Context } from "../Context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faUser } from '@fortawesome/free-solid-svg-icons'
@@ -23,6 +24,10 @@ export default function Products() {
 
         <div className="container-xl mt-5 " >
             <h2><b>Featured Products</b> </h2>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
             <div id="myCarousel" className="carousel">
                 <div className="row">
                     {products.map((product) => (
@@ -42,7 +47,10 @@ export default function Products() {
                                     </div>
                                     <p className="item-price"><strike>${product.price + 100}</strike> <b>${product.price}</b></p>
                                     <div className="d-flex justify-content-center">
-                                        <button className="btn btn-primary mybtn" onClick={() => addProduct(product)
+                                        <button className="btn btn-primary mybtn" onClick={() => {
+                                            addProduct(product);
+                                            toast("Item added to cart!");
+                                        }
                                         }>Add to Cart</button>
                                     </div>
 

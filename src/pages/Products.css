@@ -96,8 +96,7 @@ h2::after {
     border-radius: 20px;
 }
 
-.carousel .thumb-content .btn:hover,
-.carousel .thumb-content .btn:focus {
+.carousel .thumb-content .btn:hover {
     color: #fff;
     background: #7ac400;
     box-shadow: none;
@@ -153,6 +152,7 @@ h2::after {
 }
 
 .mybtn {
+
     width: 150px !important;
     height: 30px !important;
 }
