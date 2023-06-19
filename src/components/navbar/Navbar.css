@@ -1,0 +1,20 @@
+nav {
+    height: 50px;
+    padding: 0px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2A2F4F;
+    color: whitesmoke;
+}
+
+#logo {
+    text-decoration: none;
+    color: whitesmoke;
+    text-decoration-line: none;
+
+}
+
+a {
+    text-decoration: none;
+}
